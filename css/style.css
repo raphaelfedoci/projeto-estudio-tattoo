@@ -1,0 +1,398 @@
+:root {
+    --brand: #ffcc00;
+    --brand-light: #ffe990;
+    --brand-dark: #CAA100;
+    --dark: #14141B;
+    --black: #000000;
+    --light: #dddddd;
+    --white: #ffffff;
+
+    --font-primary: "inter", sans-serif;
+    --font-tittle: "teko", sans-serif;
+
+    --spacing-sm: 12px;
+    --spacing: 24px;
+    --spacing-md: 48px;
+    --spacing-lg: 64px;
+    --spacing-xl: 128px;
+    --swiper-theme-color:var(--brand)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-tittle);
+    text-transform: uppercase;
+    line-height: 90%;
+    color: var(--white);
+
+}
+
+
+h2 {
+    font-size: 48px;
+
+}
+
+
+p {
+    color: var(--light);
+    font-size: 16px;
+    line-height: 130%;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**************Navegação em âncora ***************/
+#sobre,
+#artistas,
+#fale-conosco {
+    scroll-margin-top: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    /*aplica suavidade à navegação*/
+}
+
+
+/**************utils**************/
+
+.container {
+
+    width: 100%;
+    max-width: 1140px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.030);
+    backdrop-filter: blur(5px);
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: 3px solid var(--brand);
+    width: 100%;
+    position: fixed;
+    /* stick no exercicio*/
+    top: 0;
+    z-index: 1000;
+
+}
+
+/*formatando o container que está dentro do header*/
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {}
+
+.menu a {
+    color: var(--white);
+    font-family: var(--font-tittle);
+    font-size: 18px;
+    text-transform: uppercase;
+    /*letras maiuscula*/
+    margin-left: 100px;
+}
+
+.menu a:hover {
+    color: var(--brand);
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(../img/bg_hero.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+
+}
+
+.hero .slogan {
+    color: var(--brand);
+
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 112px;
+    margin-top: 10px;
+
+}
+
+.hero .container {
+    margin-top: 100px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--light);
+    max-width: 832px;
+
+}
+
+.btn {
+    background-image: linear-gradient(to right, var(--brand), var(--brand-dark));
+    color: var(--dark);
+    border-radius: 5px;
+    padding: 12px 48px;
+    display: inline-block;
+    margin-top: var(--spacing);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.sobre {
+
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+
+}
+
+.sobre .container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.missao {
+    background-image: url(../img/bg_missao.webp);
+    background-size: cover;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.missao p {
+    margin: 0;
+}
+.swiper-artistas{
+    padding-bottom: 40px;
+}
+
+.artistas {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.artista p {
+    max-width: 546px;
+}
+
+
+
+.cards {
+    display: flex;
+    column-gap: var(--spacing);
+}
+
+.cards figure {
+    position: relative;
+
+}
+
+.cards figcaption {
+    background-color: var(--brand);
+    color: var(--dark);
+    padding: 4px 10px;
+    border-radius: 3px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.agende {
+    background-image: url(../img/bg_agende.webp);
+    background-size: cover;
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl)
+}
+
+.agende p {
+    margin: 0;
+}
+
+.content-agende {
+    max-width: 736px;
+}
+
+.depoimentos {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.depoimentos p {
+    font-size: 20px;
+    font-style: italic;
+    margin-left: 90px;
+    margin-right: 90px; 
+}
+
+.depoimento span {
+    color: var(--brand);
+    font: size 14px;
+
+    /**********************************FALE CONOSCO/********************************/
+
+}
+
+.fale-conosco {
+    background-color: var(--black);
+    padding: var(--spacing-xl) 0;
+
+}
+
+.fale-conosco .container {
+    display: flex;
+    gap: var(--spacing)
+}
+
+.fale-conosco ul {
+    color: var(--light);
+    line-height: 130%;
+    list-style: inside;
+    list-style-image: url(../img/list.svg);
+}
+
+.footer {
+    padding: var(--spacing-lg);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer .endereco {
+    max-width: 300px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.footer .icons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+/*media queries -> condicionais para implementar mudanças no projeto (mudanças de tela)*/
+
+@media(max-width:1140px){
+
+    h2{
+        font-size:32px
+    }
+
+    .menu{
+        display:none
+    }
+   .bar{
+    width: 40px;
+    height: 3px;
+    background-color: var(--light);
+    margin-bottom:3px;
+   } 
+   
+   .hero{ height: auto;
+    min-height: 600px;
+    background-position: right;/*faz com que a imagem de fundo comece da direita para esquerda*/
+   }
+
+
+   .hero h1{ font-size: 64px;
+
+   }
+
+   .hero p{ font-size: 18px;
+
+   }
+
+   .sobre-image img{
+    width: 400px;
+    height: auto;
+   }
+
+}
+
+@media (max-width:767px){
+
+    :root{--spacing-xl:64px 
+    }
+
+    img{max-width: 100%;
+        height: auto;
+}
+
+    .hero h1{
+        font-size: 40px;
+    }
+
+    .sobre .container{
+        flex-direction: column;
+    }
+
+    .missao, .agende{
+        background-position: center;
+    }
+
+    .missao p, .agende p{
+        margin-top: 10px;
+    }
+
+    .fale-conosco .container{
+        flex-direction: column;
+    }
+
+    .depoimentos p{
+        font-size: 18px;
+    }
+
+    .mapa iframe{
+       max-width: 100%;
+        height: 300px;
+    }
+
+    .footer .container{
+        flex-direction: column;
+        row-gap: var(--spacing);
+    }
+}
