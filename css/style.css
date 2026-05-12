@@ -107,7 +107,9 @@ html {
     align-items: center;
 }
 
-.menu {}
+.menu {
+    display: flex;
+}
 
 .menu a {
     color: var(--white);
@@ -316,22 +318,60 @@ html {
 
 /*media queries -> condicionais para implementar mudanças no projeto (mudanças de tela)*/
 
-@media(max-width:1140px){
+@media (max-width:1140px){
 
     h2{
         font-size:32px
     }
 
     .menu{
-        display:none
+       /* display:none*/
+       background-color: var(--dark);
+       flex-direction: column;
+       position: absolute;
+       left: 0;
+       top: 102px;
+       width: 100%;
+       height: 100vh;
+       transform: translateX(-100%);
+       transition: 0.3s;
     }
+
+    .menu-open{
+        transform: translateX(0);
+        /* Essa classe só será aplicada ao HTML quando o usuário clicar no botão*/
+    }
+
+    .menu a{
+        padding-top: 36px;
+        padding-bottom: 36px;
+        padding-left: 12px;
+        border-bottom: 3px solid var(--brand-light);
+        margin: 0;
+        
+    }
+
    .bar{
     width: 40px;
     height: 3px;
     background-color: var(--light);
     margin-bottom:3px;
+    transition: 0.3s;
    } 
    
+.x .bar:first-child{
+    transform: rotate(45deg) translate(0px,5px);
+}
+
+.x .bar:nth-child(2){
+    opacity: 0;
+    transform:translateX(-200px);
+}
+
+.x .bar:last-child{
+    transform: rotate(-45deg) translate(4px, -8px);
+}
+
    .hero{ height: auto;
     min-height: 600px;
     background-position: right;/*faz com que a imagem de fundo comece da direita para esquerda*/
@@ -350,6 +390,11 @@ html {
     width: 400px;
     height: auto;
    }
+
+.mapa iframe{
+    width: 400px;
+}
+
 
 }
 
