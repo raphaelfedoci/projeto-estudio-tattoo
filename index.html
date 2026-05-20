@@ -13,7 +13,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
 
 </head>
@@ -53,7 +53,10 @@
                 tatuagens
                 personalizadas, com artistas experientes em diferentes estilos.</p>
 
-            <a href="#" class="btn">Agendar avaliação</a>
+
+            <div class="container-btn">
+                <a href="#" class="btn">Agendar avaliação</a>
+            </div>
         </div>
 
     </section>
@@ -89,8 +92,9 @@
 
             <h2>Nossa missão não é apenas tatuar</h2>
             <p>É transformar ideias, memórias e símbolos em arte permanente.</p>
-
-            <a href="#" class="btn">Quero agendar uma avaliação</a>
+            <div class="container-btn">
+                <a href="#" class="btn">Quero agendar uma avaliação</a>
+            </div>
     </section>
 
     <section class="artistas" id="artistas">
@@ -149,7 +153,9 @@
                 <h2>Agende sua tatuagem</h2>
                 <p>Escolha o estilo de tatuagem, converse com um de nossos artistas e agende sua sessão no estúdio. Cada
                     tatuagem é planejada de forma personalizada para garantir um resultado único.</p>
-                <a href="#" class="btn">Agendar tatuagem</a>
+                <div class="container-btn">
+                    <a href="#" class="btn">Agendar tatuagem</a>
+                </div>
             </div>
         </div>
     </section>
@@ -253,10 +259,13 @@
 
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+
     <script src="js/script.js"></script>
 
 
-    
+
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
@@ -273,13 +282,13 @@
             slidesPerView: 1,
             spaceBetween: 24,
 
-            breakpoints:{
-                768:{
-                    slidesPerView:2,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
                 },
 
-                1140:{
-                    slidesPerView:3,
+                1140: {
+                    slidesPerView: 3,
                 }
 
             },

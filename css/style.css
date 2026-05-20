@@ -27,6 +27,7 @@
 body {
     font-family: var(--font-primary);
     background-color: var(--dark);
+    overflow-x: hidden; /*enconder a barra de rolagem horizontal*/
 }
 
 h1,
